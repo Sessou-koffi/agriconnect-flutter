@@ -14,10 +14,10 @@ class AgriConnectApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => CultureProvider(),
+          create: (_) => CultureProvider()..loadCultures(),
         ),
         ChangeNotifierProvider(
-          create: (_) => ActiviteProvider(),
+          create: (_) => ActiviteProvider()..loadActivites(),
         ),
       ],
       child: MaterialApp.router(

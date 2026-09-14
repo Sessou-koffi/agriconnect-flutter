@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/culture_provider.dart';
-import '../models/culture.dart';
+//import '../models/culture.dart';
 
 class CultureDetailScreen extends StatelessWidget {
   const CultureDetailScreen({

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
 
 import '../providers/culture_provider.dart';
 import '../widgets/culture_card.dart';
 import '../widgets/empty_state.dart';
-import 'package:go_router/go_router.dart';
+
 
 class CulturesScreen extends StatefulWidget {
   const CulturesScreen({super.key});
@@ -112,7 +113,7 @@ class _CulturesScreenState extends State<CulturesScreen> {
             child: ListView.separated(
               padding: const EdgeInsets.all(16),
               itemCount: provider.cultures.length,
-              separatorBuilder: (_, __) => const SizedBox(height: 12),
+              separatorBuilder: (_,_) => const SizedBox(height: 12),
               itemBuilder: (context, index) {
                 final culture = provider.cultures[index];
 

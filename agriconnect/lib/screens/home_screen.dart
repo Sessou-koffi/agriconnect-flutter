@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
 
 import '../providers/culture_provider.dart';
 
@@ -76,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
-                      // La navigation sera ajoutée avec le routeur.
+                      context.push('/cultures');
                     },
                   ),
                 ),
@@ -92,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
-                      // La navigation sera ajoutée ensuite.
+                      context.push('/activites');
                     },
                   ),
                 ),
