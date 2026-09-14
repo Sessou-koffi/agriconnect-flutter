@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/culture_provider.dart';
 import '../widgets/culture_card.dart';
 import '../widgets/empty_state.dart';
+import 'package:go_router/go_router.dart';
 
 class CulturesScreen extends StatefulWidget {
   const CulturesScreen({super.key});
@@ -128,12 +129,14 @@ class _CulturesScreenState extends State<CulturesScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Le formulaire d’ajout sera disponible à l’étape suivante.'),
-            ),
-          );
+        onPressed: () async {
+          await context.push('/cultures/new');
+
+          if (!context.mounted) {
+            return;
+          }
+
+          await context.read<CultureProvider>().loadCultures();
         },
         icon: const Icon(Icons.add),
         label: const Text('Ajouter'),
