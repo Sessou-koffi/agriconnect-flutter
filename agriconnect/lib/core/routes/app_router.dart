@@ -7,7 +7,6 @@ import '../../screens/conseils_screen.dart';
 import '../../screens/culture_form_screen.dart';
 import '../../models/culture.dart';
 import '../../screens/culture_detail_screen.dart';
-//import '../../screens/activites_screen.dart';
 import '../../screens/activite_form_screen.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -58,6 +57,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/activites/new',
       builder: (context, state) => const ActiviteFormScreen(),
+    ),
+    GoRoute(
+      path: '/conseils',
+      builder: (context, state) => const ConseilsScreen(),
     ),
   ],
 );

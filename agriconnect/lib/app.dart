@@ -5,6 +5,7 @@ import 'core/routes/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'providers/culture_provider.dart';
 import 'providers/activite_provider.dart';
+import 'providers/conseil_provider.dart';
 
 class AgriConnectApp extends StatelessWidget {
   const AgriConnectApp({super.key});
@@ -18,6 +19,9 @@ class AgriConnectApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => ActiviteProvider()..loadActivites(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ConseilProvider()..loadConseils(),
         ),
       ],
       child: MaterialApp.router(

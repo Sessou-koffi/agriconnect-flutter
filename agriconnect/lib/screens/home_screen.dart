@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
-                      // La navigation sera ajoutée ensuite.
+                      context.push('/conseils');
                     },
                   ),
                 ),
