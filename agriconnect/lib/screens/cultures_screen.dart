@@ -118,6 +118,9 @@ class _CulturesScreenState extends State<CulturesScreen> {
 
                 return CultureCard(
                   culture: culture,
+                  onTap: () {
+                    context.push('/cultures/${culture.id}');
+                  },
                   onDelete: () => _deleteCulture(
                     context,
                     culture.id,
